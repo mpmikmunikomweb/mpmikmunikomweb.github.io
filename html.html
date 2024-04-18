@@ -1,0 +1,68 @@
+<div class="container">
+    <h3>Aspirasi</h3>
+        <div class="form-container">
+            <form name="mpm-aspirasi">
+                <div id="form-alert">
+                    <label for="email" name="email">
+                        <h3>Email
+                            <span class="text-span">&nbsp;*</span>
+                        </h3>
+                    </label>
+                    <input style="color: black;" for="email" type="text" id="email" name="email" placeholder="nama.nim@mahasiswa.unikom.ac.id" pattern="[a-z]+[.]+[0-9]+@stu.untar.ac.id" title="Harap menggunakan email mahasiswa" required> 
+                    <p>Harap mengisi dengan menggunakan alamat email mahasiswa</p>
+                        <label for="nim">
+                            <h3>NIM
+                                <span class="text-span">&nbsp;*</span>
+                            </h3>
+                        </label>
+
+                        <input style="color: black;" for="email" type="text" id="email" name="nim" placeholder="1031228" pattern="[a-z]+[.]+[0-9]+@stu.untar.ac.id" title="Harap menggunakan email mahasiswa" required> 
+                        <p>Harap mengisi dengan menggunakan nomor induk mahasiswa unikom</p>
+
+                            <label for="nama">
+                                <h3>Nama
+                                    <span class="text-span">&nbsp;*</span>
+                                </h3>
+                            </label>
+                        
+                    <input type="text" id="name" for="nama" name="nama" placeholder="Nama Lengkap " required> 
+                    <p>Harap mengisi dengan menggunakan nama lengkap / inisial</p>
+                    
+                    <label for="fakultas" name="fakultas">
+                        <h3>Fakultas
+                            <span class="text-span">&nbsp;*</span>
+                        </h3>
+                    </label>
+                    
+                    <select for="fakultas" name="fakultas" id="fakultas" class="form-select mb-3" aria-label=".form-select-lg example" style="color: gray; width:100%; padding: 10px; border-color: lightgray; border-radius: 3px; margin-bottom: 1.5%;">
+                      <option value="fakultas">Pilih Fakultas</option>
+                      <option value="FTIK">FTIK [Fakultas Teknik Dan Ilmu Komputer]</option>
+                      <option value="FEB">FEB [Fakultas Ekonomi dan Bisnis]</option>
+                      <option value="FH">FH [Fakultas Hukum]</option>
+                      <option value="FISIP">FISIP [Fakultas Ilmu Sosil Dan Ilmu Politik]</option>
+                      <option value="FD">FD [Fakultas Desain]</option>
+                      <option value="FIB">FIB [Fakultas Ilmu Budaya]</option>
+                    </select>
+                    
+                    <label for="angkatan" name="angkatan">
+                        <h3>Angkatan
+                            <span class="text-span">&nbsp;*</span>
+                        </h3>
+                    </label>
+                    
+                    <input type="number" id="angkatan" name="angkatan" min="2019" max="2023" placeholder="Contoh : 2019" required> 
+                        <label for="aspirasi">
+                            <h3>Aspirasi
+                                <span class="text-span">&nbsp;*</span>
+                            </h3>
+                        </label>
+                    <textarea type="text" for="aspirasi" id="aspirasi" name="aspirasi" required></textarea>
+                    <p>Aspirasi dapat berisi apa saja yang ingin anda sampaikan pada MPM Dan DPM IKM UNIKOM</p>
+
+                    <div id="liveAlertPlaceholder"></div>
+                    <button id="liveAlertBtn" type="submit" name="submit" style="padding:12px; margin-bottom: 15px; background:#a10606; color:white; cursor:pointer; border:none; border-radius:3px;" class="submit-aspirasi" onclick="notif()">Submit</button>
+                </div>   
+            </form>
+        </div>
+
+    </div>

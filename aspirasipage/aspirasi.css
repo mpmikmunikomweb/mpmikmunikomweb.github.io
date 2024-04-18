@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+select 
+    {
+        color: black;
+        }
+        
+select:invalid 
+        {
+          color: green;
+        }
+
+/*---------------------------nav------------------------- */
+nav{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background: whitesmoke;
+    -webkit-box-shadow: 0 5px 6px -6px #777;
+    -moz-box-shadow: 0 5px 6px -6px #777;
+         box-shadow: 0 5px 6px -6px #777;
+  }
+  nav:after{
+    content: '';
+    clear: both;
+    display: table;
+  }
+  nav .logo{
+    float: left;
+    color:black;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 60px;
+  }
+  
+  
+  .logoImg .img1{
+  
+    display: block;
+      margin: 0 auto;
+      height: 70px;
+  }
+  
+  .logoImg .img2{
+    margin: 0 auto;
+    height: 70px;
+    display: none;
+  }
+  
+  
+  nav ul{
+    float: right;
+    margin-right: 40px;
+    list-style: none;
+    position: relative;
+  }
+  nav ul li{
+    display: inline-block;
+    background: whitesmoke;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: black;
+    line-height: 70px;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 8px 15px;
+  }
+  nav ul li a:hover{
+    color: #1e90ff;
+    border-radius: 5px;
+  
+  }
+  nav ul ul li a:hover{
+    box-shadow: none;
+  }
+  nav ul ul{
+    position: absolute;
+    top: 90px;
+    border-top: 3px solid #1e90ff;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+  }
+  nav ul ul ul{
+    border-top: none;
+  }
+  nav ul li:hover > ul{
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+  }
+  nav ul ul li{
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+  }
+  nav ul ul li a{
+    line-height: 50px;
+  }
+  nav ul ul ul li{
+    position: relative;
+    top: -60px;
+    left: 150px;
+  }
+  .show,.icon{
+    display: none;
+  }
+
+  nav input{
+    display: none;
+  }
+
+  .fa-plus{
+    font-size: 15px;
+    margin-left: 40px;
+  }
+  @media all and (max-width: 968px) {
+  
+    .logoImg img{
+      float: left;
+    }
+  
+    nav ul{
+      margin-right: 0px;
+      float: left;
+    }
+    nav .logo{
+      padding-left: 30px;
+      width: 100%;
+    }
+    .show + a, ul{
+      display: none;
+    }
+    nav ul li,nav ul ul li{
+      display: block;
+      width: 100%;
+    }
+    nav ul li a:hover{
+      box-shadow: none;
+    }
+    .show{
+      display: block;
+      color: black;
+      font-size: 15px;
+      padding: 0 20px;
+      line-height: 70px;
+      cursor: pointer;
+    }
+    .show:hover{
+      color: #1e90ff;
+    }
+    .icon{
+      display: block;
+      color: black;
+      position: absolute;
+      top: 0%;
+      right: 20px;
+      line-height: 70px;
+      cursor: pointer;
+      font-size: 25px;
+    }
+    nav ul ul{
+      top: 70px;
+      border-top: 0px;
+      float: none;
+      position: static;
+      display: none;
+      opacity: 1;
+      visibility: visible;
+    }
+    nav ul ul a{
+      padding-left: 40px;
+    }
+    nav ul ul ul a{
+      padding-left: 80px;
+    }
+    nav ul ul ul li{
+      position: static;
+    }
+    [id^=btn]:checked + ul{
+      display: block;
+    }
+    nav ul ul li{
+      border-bottom: 0px;
+    }
+    span.cancel:before{
+      content: '\f00d';
+    }
+  }
+  
+  @media all and (max-width: 380px) {
+    .logoImg .img1{
+      display: none;
+    }
+  
+    .logoImg .img2{
+      display: block;
+      float: left;
+    }
+  
+    nav .logo{
+      padding-left: 0;
+    }
+  
+  }
+  
+  
+  /*---------------x------------nav---------x---------------- */
+
+
+
+
+/*-------------------------------Container----------------------------------*/
+    .container{
+        margin: auto;
+        width: 75%;
+        padding-top: 70px;
+        min-height: 80vh;
+    }
+
+    .container >h3{
+        font-size: 25px;
+        padding-top: 5rem;
+        padding-bottom: 1rem;
+    }
+
+    .form-container{
+        padding: 0 1rem;
+    }
+
+    .form-container label h3{
+        font-weight: 500;
+        opacity: 0.7;
+    }
+
+    .text-span{
+        color: #1e90ff;
+    }
+
+    .form-container p{
+        font-size: 10px;
+        opacity: 0.7;
+        color: gray;
+        margin-bottom:12px;
+    }
+
+    input[name="fakultas"],input[name="angkatan"]{
+        margin-bottom:12px;
+    }
+
+
+    input[type=text],input[type=number]{
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        width: 100%;
+        padding: 10px 10px;
+    }
+
+        .form-container textarea{
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            width: 100%;
+            padding: 10px 10px;
+            height: 200px;
+        
+    }
+
+
+    input[type=submit] {
+        width: 100%;
+        background-color: #1e90ff;
+        color: white;
+        padding: 10px 10px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-bottom: 10rem;
+      }
+
+      input[type=submit]:hover {
+        background-color: #1e90ff;
+      }
+
+
+      @media only screen and (max-width:650px){
+
+        .container{
+            width: 90%;
+        }
+      
+      
+      }
+
+
+/*-----------------x--------------Container------------------x----------------*/
+
+
+
+
+
+/*-------------------------------FOOTER----------------------------------*/
+.footer{
+    position:relative;
+    bottom:0;
+    display:flex;
+    justify-content: center;
+    padding-bottom:3rem;
+    font-size: x-small;
+  }
+  
+  .about-us p{
+    font-size: 16px;
+  }
+  
+  @media only screen and (max-width:450px){
+  
+    .site{
+        font-size: 14px;
+    }
+  
+    .footer h1{
+        font-size: 18px;;
+    }
+  
+  
+  }
+  
+  
+  
+  
+  h3{
+    font-weight: 500; 
+    font-size: 16PX;
+  }
+  
+  h4{
+    font-weight: 300;
+    font-size: 10PX;
+  }
+  
+  
+  .footer-container{
+    padding: 2rem 0;
+    display:grid;
+    background:silver;
+    grid-template-columns:1fr 1fr 1fr;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .lambang{
+    display: flex;
+    font-size:1.7rem;
+    padding:0 7px;
+  }
+  
+  
+  .nav-link{
+    color:black;
+    margin-left: 10px;
+  }
+  
+  
+  .footer1{
+  padding: 0 30px;
+  
+  
+  }
+  
+  .info{
+    display: flex;
+    padding-bottom: 15px;
+  }
+  
+  
+  
+  .jarak{
+    padding-top:5px;
+  }
+  
+  
+  .email{
+    margin-left: 40px;
+  }
+  
+  .footer2{
+    padding-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer3{
+  display:flex;
+  flex-direction: column;
+  }
+  
+  
+  .copyright{
+    overflow: hidden;
+    background-color: rgb(200, 200, 200);
+    color: black;
+    text-align: center;
+  }
+  
+  
+  
+  
+  @media only screen and (max-width:900px){
+    .footer-container{
+        grid-template-columns: 1fr;
+    }
+  
+    .line{
+        border-bottom: 2px solid white;
+        padding-top:15px;
+        width: 80%;
+    }
+  
+    .footer1{
+      justify-content: center;
+        align-items: center;
+        text-align: center; 
+    }
+    .footer3{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .info{
+        flex-direction: column;
+    }
+    .email{
+        margin-left: 0px;
+    }
+  }
+  /*---------------x----------------footer----------------x-----------------*/

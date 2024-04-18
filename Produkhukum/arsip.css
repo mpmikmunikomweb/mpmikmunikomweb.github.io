@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+nav{
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  background: whitesmoke;
+  -webkit-box-shadow: 0 5px 6px -6px #777;
+  -moz-box-shadow: 0 5px 6px -6px #777;
+       box-shadow: 0 5px 6px -6px #777;
+       display: block;
+}
+nav:after{
+  content: '';
+  clear: both;
+  display: table;
+}
+nav .logo{
+  float: left;
+  color:black;
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 70px;
+  padding-left: 60px;
+}
+
+
+.logoImg .img1{
+  
+  display: block;
+    margin: 0 auto;
+    height: 70px;
+}
+
+.logoImg .img2{
+  margin: 0 auto;
+  height: 70px;
+  display: none;
+}
+
+
+nav ul{
+  float: right;
+  margin-right: 40px;
+  list-style: none;
+  position: relative;
+}
+nav ul li{
+  display: inline-block;
+  background: whitesmoke;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: black;
+  line-height: 70px;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 8px 15px;
+}
+nav ul li a:hover{
+  color: #1e90ff;
+  border-radius: 5px;
+
+}
+nav ul ul li a:hover{
+  box-shadow: none;
+}
+nav ul ul{
+  position: absolute;
+  top: 90px;
+  border-top: 3px solid #1e90ff;
+  opacity: 0;
+  visibility: hidden;
+  transition: top .3s;
+}
+nav ul ul ul{
+  border-top: none;
+}
+nav ul li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+nav ul ul li{
+  position: relative;
+  margin: 0px;
+  width: 150px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+nav ul ul li a{
+  line-height: 50px;
+}
+nav ul ul ul li{
+  position: relative;
+  top: -60px;
+  left: 150px;
+}
+.show,.icon,input{
+  display: none;
+}
+.fa-plus{
+  font-size: 15px;
+  margin-left: 40px;
+}
+@media all and (max-width: 968px) {
+
+  .logoImg .img1{
+    float: left;
+  }
+
+  nav ul{
+    margin-right: 0px;
+    float: left;
+  }
+  nav .logo{
+    padding-left: 30px;
+    width: 100%;
+  }
+  .show + a, ul{
+    display: none;
+  }
+  nav ul li,nav ul ul li{
+    display: block;
+    width: 100%;
+  }
+  nav ul li a:hover{
+    box-shadow: none;
+  }
+  .show{
+    display: block;
+    color: black;
+    font-size: 15px;
+    padding: 0 20px;
+    line-height: 70px;
+    cursor: pointer;
+  }
+  .show:hover{
+    color: #1e90ff;
+  }
+  .icon{
+    display: block;
+    color: black;
+    position: absolute;
+    top: 0%;
+    right: 20px;
+    line-height: 70px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  nav ul ul{
+    top: 70px;
+    border-top: 0px;
+    float: none;
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  nav ul ul a{
+    padding-left: 40px;
+  }
+  nav ul ul ul a{
+    padding-left: 80px;
+  }
+  nav ul ul ul li{
+    position: static;
+  }
+  [id^=btn]:checked + ul{
+    display: block;
+  }
+  nav ul ul li{
+    border-bottom: 0px;
+  }
+  span.cancel:before{
+    content: '\f00d';
+  }
+}
+
+@media all and (max-width: 380px) {
+  .logoImg .img1{
+    display: none;
+  }
+
+  .logoImg .img2{
+    display: block;
+    float: left;
+  }
+
+  nav .logo{
+    padding-left: 0;
+  }
+
+}
+
+/*---------------------------salam------------------------- */
+
+.salam{
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 5rem;
+    padding-top: 6rem;
+    box-shadow: 
+    inset 0px 12px 8px -10px #CCC,
+    inset 0px -11px 8px -10px #CCC; 
+    background: url('../img/pic2.png');
+    background:url(../gambar/aspirasi.png);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position:top;
+  }
+  
+  .warma-salam{
+    height: 100%;
+    background: rgba(22, 22, 24, 0.8);
+   
+  }
+  
+  
+  .salam header, .text-video header{
+    text-align: left;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: whitesmoke;
+    
+  }
+  .content p{
+    text-align: justify;
+    font-size: 16px;
+    font-weight: 300;
+    color: whitesmoke;
+  }
+  
+  
+  
+  @media all and (max-width: 650px) {
+    .salam{
+      padding: 2rem 2rem;
+      padding-top: 6rem;
+    }
+  
+    header{
+      font-size:20px;
+    }
+  
+    .content >p{
+      font-size: 14px;
+    }
+  
+  }
+  @media all and (max-width: 400px) {
+  
+    .content >header{
+      text-align: center;
+      font-size:17px ;
+    }
+    .content >p{
+      text-align: center;
+  
+    }
+  
+  }
+    /*------------x--------------salam---------x---------------- */
+    .arsip-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      padding: 16px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background:url(../img/legislasi.png);
+      
+    }
+    .grid-header{
+       
+      
+      padding: 2rem 0.7rem;
+      font-size: 19px;
+      
+    }
+    .grid-item {
+      background-color: rgba(255, 255, 255, 0);
+     text-shadow: rgb(68, 68, 68);
+      padding: 7.8px;
+      font-size: 18px;
+      text-align: center;
+    }
+  
+    .grid-list{
+      margin: .7rem 0;
+      background-color: #a10606;
+      font-size: 19px;
+      padding:.7rem 0;
+      border-radius: 3rem;
+      display: flex;
+      justify-content: center;
+    }  
+  
+    .grid-list >a{
+      text-decoration: none;
+      align-items: center;
+      font-size: 13px;
+      color:white;
+    }
+  
+    .grid-list:hover{
+      background-color: #b62323;
+    }
+  
+    .grid-item>h3{
+        font-weight: 600;
+        
+    }
+      .grid-item>h4{
+          border-radius: 3rem;
+          height: 3rem;
+          align-items: center;
+          font-size: medium;
+          color:white;
+          background-color: #a10606;
+          padding-top: 10px;
+  
+  
+    }
+    @media only screen and (max-width:1055px){
+      .arsip-container{
+        grid-template-columns:1fr 1fr;
+        padding: 3rem 2rem;
+      }
+      .grid-header{
+          background-color: rgb(255, 255, 255);  
+          
+          padding: 0.7rem 0.7rem;
+          
+          
+        }
+    
+    }
+    
+    @media only screen and (max-width:700px){
+      .arsip-container{
+        grid-template-columns:1fr;
+        padding: 3rem 2rem;
+      }
+  
+    
+    }
+    
+    @media only screen and (max-width:500px){
+      .arsip-container{
+        padding: 3rem 2rem;
+      }
+    
+    }
+  /*-------------------------------FOOTER----------------------------------*/
+.footer{
+    position:relative;
+    bottom:0;
+    display:flex;
+    justify-content: center;
+    padding-bottom:3rem;
+    font-size: x-small;
+  }
+  
+  .about-us p{
+    font-size: 16px;
+  }
+  
+  @media only screen and (max-width:450px){
+  
+    .site{
+        font-size: 14px;
+    }
+  
+    .footer h1{
+        font-size: 18px;;
+    }
+  
+  
+  }
+  
+  
+  
+  
+  h3{
+    font-weight: 500; 
+    font-size: 16PX;
+  }
+  
+  h4{
+    font-weight: 300;
+    font-size: 10PX;
+  }
+  
+  
+  .footer-container{
+    padding: 2rem 0;
+    display:grid;
+    background:silver;
+    grid-template-columns:1fr 1fr 1fr;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .lambang{
+    font-size:1.7rem;
+    padding:0 7px;
+  }
+  
+  
+  .nav-link{
+    color:black;
+  }
+  
+  
+  .footer1{
+  padding: 0 30px;
+  
+  
+  }
+  
+  .info{
+    display: flex;
+    padding-bottom: 15px;
+  }
+  
+  
+  
+  .jarak{
+    padding-top:5px;
+  }
+  
+  
+  .email{
+    margin-left: 40px;
+  }
+  
+  .footer2{
+    padding-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer3{
+  display:flex;
+  flex-direction: column;
+  }
+  
+  
+  .copyright{
+    overflow: hidden;
+    background-color: rgb(200, 200, 200);
+    color: black;
+    text-align: center;
+  }
+  
+  
+  
+  
+  @media only screen and (max-width:900px){
+    .footer-container{
+        grid-template-columns: 1fr;
+    }
+  
+    .line{
+        border-bottom: 2px solid white;
+        padding-top:15px;
+        width: 80%;
+    }
+  
+    .footer1{
+      justify-content: center;
+        align-items: center;
+        text-align: center; 
+    }
+    .footer3{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .info{
+        flex-direction: column;
+    }
+    .email{
+        margin-left: 0px;
+    }
+  }
+  /*---------------x----------------footer----------------x-----------------*/
+  
+  
